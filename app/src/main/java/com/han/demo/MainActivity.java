@@ -6,12 +6,17 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.han.framework.utils.DeviceUtils;
+import com.han.framework.utils.ScreenUtils;
+import com.han.framework.utils.SizeUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private String[] mContentArray = {
-            "CoordinatorLayout"
+            "CoordinatorLayout",
+            "APP"
     };
 
     private RecyclerView mRecyclerView;
@@ -49,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(layoutManager);
 
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+
 
         mAdapter = new MainAdapter(this);
         mRecyclerView.setAdapter(mAdapter);
@@ -70,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             TextView textView = new TextView(MainActivity.this);
             RecyclerView.LayoutParams params
                     = new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                    100);
+                    SizeUtils.dp2px(mContext, 40));
             textView.setLayoutParams(params);
 
             textView.setGravity(Gravity.CENTER);
