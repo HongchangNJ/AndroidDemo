@@ -1,4 +1,4 @@
-package com.han.demo.view;
+package com.han.demo.drawview;
 
 import android.content.Context;
 import android.graphics.Canvas;
