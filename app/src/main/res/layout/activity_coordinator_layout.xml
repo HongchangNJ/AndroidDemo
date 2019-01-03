@@ -16,7 +16,7 @@
         android:text="Hello"
         app:layout_behavior="com.han.demo.appbarlayout.MyBehavior" />
 
-    <com.han.demo.appbarlayout.DepencyView
+    <com.han.demo.drawview.DragView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="300dp"

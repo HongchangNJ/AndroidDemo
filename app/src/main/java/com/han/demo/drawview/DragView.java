@@ -1,4 +1,4 @@
-package com.han.demo.appbarlayout;
+package com.han.demo.drawview;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -8,7 +8,7 @@ import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
 
-public class DepencyView extends View {
+public class DragView extends View {
     private int lastX;
     private int lastY;
     private int mWidth;
@@ -17,14 +17,14 @@ public class DepencyView extends View {
     private int screenWidth;
     private int screenHeight;
 
-    public DepencyView(Context context) {
+    public DragView(Context context) {
         super(context);
         DisplayMetrics display = context.getResources().getDisplayMetrics();
         screenWidth = display.widthPixels;
         screenHeight = display.heightPixels;
     }
 
-    public DepencyView(Context context, AttributeSet attrs) {
+    public DragView(Context context, AttributeSet attrs) {
         super(context, attrs);
         mWidth = getMeasuredWidth();
         mHeight = getMeasuredHeight();

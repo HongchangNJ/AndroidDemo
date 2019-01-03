@@ -7,6 +7,8 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 
+import com.han.demo.drawview.DragView;
+
 public class MyBehavior extends CoordinatorLayout.Behavior<Button> {
 
     private int width;
@@ -20,7 +22,7 @@ public class MyBehavior extends CoordinatorLayout.Behavior<Button> {
     @Override
     public boolean layoutDependsOn(CoordinatorLayout parent, Button child, View dependency) {
         //如果dependency是TempView的实例，说明它就是我们所需要的Dependency
-        return dependency instanceof DepencyView;
+        return dependency instanceof DragView;
     }
 
     //每次dependency位置发生变化，都会执行onDependentViewChanged方法
