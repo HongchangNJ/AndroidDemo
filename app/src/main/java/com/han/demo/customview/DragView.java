@@ -1,13 +1,15 @@
-package com.han.demo.drawview;
+package com.han.demo.customview;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
 
+/**
+ * 可以摁住拖动的View
+ */
 public class DragView extends View {
     private int lastX;
     private int lastY;

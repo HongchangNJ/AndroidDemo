@@ -3,7 +3,6 @@ package com.han.demo;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
@@ -11,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.han.demo.appbarlayout.CoordinatorActivity;
-import com.han.demo.drawview.CustomViewActivity;
+import com.han.demo.customview.CustomViewActivity;
 import com.han.framework.utils.SizeUtils;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder> {

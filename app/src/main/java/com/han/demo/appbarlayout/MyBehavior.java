@@ -7,7 +7,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 
-import com.han.demo.drawview.DragView;
+import com.han.demo.customview.DragView;
 
 public class MyBehavior extends CoordinatorLayout.Behavior<Button> {
 

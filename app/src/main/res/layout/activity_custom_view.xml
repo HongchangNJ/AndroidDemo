@@ -8,15 +8,20 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.han.demo.drawview.DragView
+        <com.han.demo.customview.DragView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="0dp"
             android:layout_marginTop="0dp"
             android:background="#3366CC"  />
         
-        <com.han.demo.drawview.VolumneView
+        <com.han.demo.customview.VolumneView
             android:layout_width="match_parent"
             android:layout_height="100dp" />
+
+        <com.han.demo.customview.HistogramView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#506E7A"/>
     </LinearLayout>
 </ScrollView>

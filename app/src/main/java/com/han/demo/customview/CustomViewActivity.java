@@ -1,4 +1,4 @@
-package com.han.demo.drawview;
+package com.han.demo.customview;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

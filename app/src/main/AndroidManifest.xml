@@ -27,7 +27,7 @@
         <activity android:name="com.han.demo.appbarlayout.CoordinatorActivity">
 
         </activity>
-        <activity android:name=".drawview.CustomViewActivity" />
+        <activity android:name=".customview.CustomViewActivity" />
     </application>
 
 </manifest>
