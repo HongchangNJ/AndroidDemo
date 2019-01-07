@@ -11,6 +11,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.han.demo.utils.StatusBarUtils;
+
 public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "Main";
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StatusBarUtils.translucent(this);
         setContentView(R.layout.activity_main);
         //OkgoUtil.okgo_init_timeout(5000);
 
