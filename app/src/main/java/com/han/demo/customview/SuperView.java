@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -38,13 +39,21 @@ public class SuperView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        Path path = new Path(); // 初始化 Path 对象
+        mPaint.setColor(Color.parseColor("#ff0000"));
+        // 使用 path 对图形进行描述（这段描述代码不必看懂）
+        path.addArc(200, 0, 400, 200, -225, 225);
+        path.arcTo(400, 0, 600, 200, -180, 225, false);
+        path.lineTo(400, 342);
+        canvas.drawPath(path, mPaint);
         // 直方图
         // 先画背景
-        mPaint.setColor(Color.parseColor("#506E7A"));
-        canvas.drawRect(0, 0, ScreenUtils.getScreenWidth(getContext()), 720, mPaint);
+        /*mPaint.setColor(Color.parseColor("#506E7A"));
+        canvas.drawRect(0, HEIGHT, ScreenUtils.getScreenWidth(getContext()), 720, mPaint);
         drawZhifang(canvas);
-        HEIGHT += 720;
+        HEIGHT += 720;*/
 
+        HEIGHT += 400;
         // 画线
         mPaint.setColor(Color.RED);
         canvas.drawText("线", 50, HEIGHT + 50, mPaint);
@@ -74,6 +83,9 @@ public class SuperView extends View {
         mPaint.setStyle(Paint.Style.STROKE);
         canvas.drawRect(100, HEIGHT + 50, 500, HEIGHT + 100, mPaint);
         HEIGHT += 150;
+
+
+
     }
 
 
